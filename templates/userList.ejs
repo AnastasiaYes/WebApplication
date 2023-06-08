@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+          integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+          integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/media.css">
+</head>
+<body>
+
+<header>
+    <nav class="toolbar container">
+        <span id="block" class="fa fa-lock" aria-hidden="true"></span>
+        <span id="unblock" class="fa fa-unlock unblock" aria-hidden="true"></span>
+        <div class="tooltip">Lorem ipsum</div>
+        <span id="delete" class="fa fa-trash" aria-hidden="true"></span>
+    </nav>
+</header>
+
+<main class="container mt-5">
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">
+                <div class="form-check">
+                    <input class="form-check-input select_all" type="checkbox" value="" id="flexCheckDefault">
+                </div>
+            </th>
+            <th scope="col">id</th>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+            <th scope="col">Registration date</th>
+            <th scope="col">Last login date</th>
+            <th scope="col">Status</th>
+        </tr>
+        </thead>
+        <tbody>
+        <% rows.forEach(function(row) { %>
+            <tr>
+                <td>
+                    <input class="form-check-input user_check" type="checkbox" value="" id="flexCheckDefault" data-user-id="<%= row.id %>">
+                </td>
+                <td><%= row.id %></td>
+                <td><%= row.username %></td>
+                <td><%= row.email %></td>
+                <td><%= row.registration_date %></td>
+                <td><%= row.last_login_date %></td>
+                <td><%= row.status %></td>
+            </tr>
+        <% }); %>
+        </tbody>
+    </table>
+
+</main>
+
+<footer>
+
+</footer>
+
+<script src="/js/userList.js"></script>
+</body>
+</html>

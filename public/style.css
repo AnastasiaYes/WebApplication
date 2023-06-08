@@ -1,0 +1,67 @@
+header {
+    margin: 20px;
+}
+body {
+    margin: 0;
+    text-align: center;
+    background-color: #f7f7ff;
+}
+
+.container_form_register, .container_form_enter{
+    display: block;
+    width: 450px;
+    margin: 30px auto;
+
+    padding: 20px 10px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 7px 7px #94949433;
+}
+
+.form_inactive {
+    display: none;
+}
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+.form-control {
+    width: 250px;
+}
+.error{
+    border: 1px solid red;
+    box-shadow: 0 0 3px 3px #ff000045;
+}
+
+.password_mismatch {
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 43px;
+    font-size: 12px;
+    display: none;
+}
+.password_mismatch.active {
+    display: block
+}
+
+.toolbar {
+    text-align: end;
+    margin-bottom: 20px;
+}
+.toolbar span {
+    margin: 5px;
+    padding: 7px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.form-check-input {
+    position: inherit;
+    margin-top: 0;
+    margin-left: 0;
+}
+.form-check {
+    padding-left: 0;
+}

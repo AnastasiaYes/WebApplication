@@ -1,0 +1,25 @@
+@media (max-width: 1200px) {  }
+
+@media (max-width: 992px) {  }
+
+@media (max-width: 768px) {  }
+
+@media (max-width: 576px) {
+    .form-group {
+        display: block;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+
+    .container_form {
+        width: 95%;
+    }
+    .password_mismatch {
+        top: 70px;
+    }
+}
+
+
+

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>UserList</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.1/css/bootstrap.min.css"
+          integrity="sha512-T584yQ/tdRR5QwOpfvDfVQUidzfgc2339Lc8uBDtcp/wYu80d7jwBgAxbyMh0a9YM9F8N3tdErpFI8iaGx6x5g=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/media.css">
+</head>
+<body>
+
+<header class="container mt-4 mb-4">
+    <nav class="text-right">
+        <button id="but_register" class="btn btn-primary" type="submit">Register</button>
+        <button id="but_entrance" class="btn btn-primary" type="submit">Enter</button>
+    </nav>
+</header>
+
+<main class="container">
+    <form class="container_form_enter" action="/login" method="post">
+        <h1 class="mb-5">Enter</h1>
+        <div class="form-group">
+            <label for="enter-email">Email address</label>
+            <input type="text" name="email" class="form-control" id="enter-email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="enter-password">Password</label>
+            <input type="password" name="password" class="form-control" id="enter-password" placeholder="Password" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Enter</button>
+    </form>
+
+    <form class="container_form_register form_inactive" action="/register" method="POST">
+        <h1 class="mb-5">Register</h1>
+        <div class="form-group">
+            <label for="userName">Name</label>
+            <input type="text" class="form-control" name="userName" id="userName" placeholder="Name" required>
+        </div>
+        <div class="form-group">
+            <label for="register-email">Email address</label>
+            <input type="text" class="form-control" id="register-email" name="email" placeholder="Email" required>
+        </div>
+        <div class="form-group">
+            <label for="register-password">Password</label>
+            <input type="password" class="form-control" id="register-password" name="password" placeholder="Password"
+                   required>
+        </div>
+        <div class="form-group">
+            <label for="password-repeat">Repeat Password</label>
+            <input type="password" class="form-control" id="password-repeat" placeholder="Repeat Password" required>
+            <span class="password_mismatch">Password mismatch</span>
+        </div>
+
+        <button type="submit" class="btn btn-primary" id="register-submit">Register</button>
+
+    </form>
+
+</main>
+
+<footer></footer>
+
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>
