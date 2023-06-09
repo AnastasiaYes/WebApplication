@@ -26,6 +26,10 @@ router.post('/register', async (req, res) => {
         return res.send({ok: false, message: "Username invalid"});
     }
 
+    if (req.body?.userName.length > 14) {
+        return res.send({ok: false, message: "Username invalid"});
+    }
+
     const emailExpr = new RegExp(/^([a-z0-9._%+-]+)@([a-z0-9.-]+)\.([a-z]{2,})$/g);
     if (!emailExpr.test(req.body.email)) {
         return res.send({ok: false, message: "Email invalid"});
@@ -111,7 +115,9 @@ router.post('/users/ban', async (req, res) => {
                 return res.send({ok: false, message: "Server error"});
             }
 
-            req.session.destroy();
+            if (~ids.indexOf(req.user.id)) {
+                req.session.destroy();
+            }
             return res.send({ok: true, message: "Users successfully blocked"});
         });
 

@@ -19,6 +19,13 @@
     .password_mismatch {
         top: 70px;
     }
+    .container_form_enter,
+    .container_form_register {
+        width: 300px;
+    }
+    .container, .container-md, .container-sm {
+        max-width: 100% !important;
+    }
 }
 
 
